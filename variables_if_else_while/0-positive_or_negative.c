@@ -4,8 +4,7 @@
 
 /* betty style doc for function
  *  main goes
- *   there
- */
+ *   therei */
 int main(void)
 {
 	int n;
@@ -15,15 +14,16 @@ int main(void)
 
 	if (n > 0)
 	{
-		printf("is positive\n");
+
+		printf("%d is positive\n", n);
 	}
-	else if (n == 0)
+	else if (n < 0)
 	{
-		printf("is zero\n");
+		printf("%d is negative\n", n);
 	}
-	else
+	else 
 	{
-		printf("is negative\n");
+		printf("%d is zero\n", n);
 	}
 
 	return (0);
