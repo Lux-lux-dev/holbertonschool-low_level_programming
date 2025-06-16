@@ -2,9 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 
-/* betty style doc for function
- *  main goes
- *   therei */
+/**
+ * betty style doc for function therei
+ * 
+ * la
+ */
 int main(void)
 {
 	int n;
