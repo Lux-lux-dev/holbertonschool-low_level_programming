@@ -15,10 +15,10 @@ int main(void)
 		if (chiffre != 9)       /* Ajout de ",, " sauf après le dernier chiffre */
 		{
 			putchar(',');
-			putchar(',');
+			putchar(' ');
 		}
 	}
-	putchar('\n'); /* Ajout du saut de ligne */
+	putchar('\n'); /* Print newline */
 
 	return (0);
 }
