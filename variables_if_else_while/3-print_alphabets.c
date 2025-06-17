@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Affiche l'alphabet en minuscules et majuscules suivi d'un saut de ligne
+ * main - Affiche l'alphabet en minuscules et majuscules
  *
  * Return: Toujours 0 (succès)
  */
