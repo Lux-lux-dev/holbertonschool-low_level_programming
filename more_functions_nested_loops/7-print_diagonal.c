@@ -1,11 +1,7 @@
 #include "main.h"
 /**
- * print_diagonal - Dessine une diagonale descendante sur le terminal.
- * @n: Le nombre de lignes de la diagonale, et donc le nombre de `\` à afficher.
- *
- * Description: Pour chaque ligne, la fonction affiche un nombre croissant
- * d'espaces suivi du caractère '\'. Si n est inférieur ou égal à 0,
- * seule une nouvelle ligne est imprimée.
+ * print_diagonal - Affiche une diagonale de '\'.
+ * @n: Nombre de fois que le caractère '\' est imprimé.
  */
 void print_diagonal(int n)
 {
