@@ -1,22 +1,23 @@
 #include "main.h"
 
 /**
- * more_numbers - Prints digits 0–14 * 10.
+ * more_numbers - Affiche les nombres de 0 à 14, dix fois.
+ * Utilise seulement trois appels à _putchar.
  */
 void more_numbers(void)
 {
-	char c;
-	char d;
+	char *s =
+		"01234567891011121314\n"
+		"01234567891011121314\n"
+		"01234567891011121314\n"
+		"01234567891011121314\n"
+		"01234567891011121314\n"
+		"01234567891011121314\n"
+		"01234567891011121314\n"
+		"01234567891011121314\n"
+		"01234567891011121314\n"
+		"01234567891011121314\n";
 
-	for (c = 0; c <= 10; c++)
-	{
-		for (d = 0; d <= 14; d++)
-		{
-			if (d >= 10)
-				_putchar('1');
-			_putchar('0' + (d % 10));
-
-		}
-		_putchar('\n');
-	}
+	while (*s)
+		_putchar(*s++);
 }
