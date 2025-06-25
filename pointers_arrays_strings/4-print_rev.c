@@ -1,10 +1,10 @@
-#include <unistd.h>
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_rev - Affiche une chaîne inversée suivie d'un saut de ligne
- * @s: Chaîne à afficher
+ * @s: Chaîne de caractères à inverser
+ *
+ * Return: Rien
  */
 void print_rev(char *s)
 {
@@ -15,8 +15,7 @@ void print_rev(char *s)
 		len++;
 
 	for (i = len - 1; i >= 0; i--)
-		putchar(s[i]);
+		write(1, &s[i], 1);
 
-	putchar('\n');
+	write(1, "\n", 1);
 }
-
