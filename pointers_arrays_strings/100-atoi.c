@@ -1,39 +1,38 @@
 #include "main.h"
 
 /**
- * _atoi - Convertit une chaîne en entier.
- * @s: La chaîne à convertir.
+ * _atoi - Converts a string to an integer
+ * @s: The string to convert
  *
- * Return: L'entier converti, ou 0 si aucun chiffre trouvé.
+ * Return: The converted integer, or 0 if no numbers are found
  */
 int _atoi(char *s)
 {
-	int i = 0, sign = 1, result = 0, found_digit = 0;
+	int i = 0, sign = 1, result = 0, started = 0, digit;
 
 	while (s[i])
 	{
-		if (s[i] == '-')
-			sign *= -1;
-		else if (s[i] == '+')
-			; /* aucun effet */
+		if (s[i] == '-' || s[i] == '+')
+		{
+			if (!started)
+				sign *= (s[i] == '-') ? -1 : 1;
+			else
+				break;
+		}
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
-			int digit = s[i] - '0';
-
-			found_digit = 1;
+			started = 1;
+			digit = s[i] - '0';
 
 			if (result > __INT_MAX__ / 10 ||
 					(result == __INT_MAX__ / 10 &&
 					 digit > __INT_MAX__ % 10))
-			{
-				if (sign == 1)
-					return (__INT_MAX__);
-				else
-					return (-__INT_MAX__ - 1);
-			}
+				return (sign == 1 ?
+						__INT_MAX__ : -__INT_MAX__ - 1);
+
 			result = result * 10 + digit;
 		}
-		else if (found_digit)
+		else if (started)
 			break;
 		i++;
 	}
